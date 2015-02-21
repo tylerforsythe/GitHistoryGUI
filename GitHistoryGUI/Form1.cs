@@ -44,8 +44,18 @@ namespace GitHistoryGUI
         }
 
         private string GetArgumentsString() {
-            return string.Format(" log --reverse --author=\"tylerforsythe\" --author=\"Tyler Forsythe\" --after=\"{0} 00:00:00\" --before=\"{0} 23:59:59\" --format=%B",
-                FormatDateForGit(dtPicker.Value.Date));
+            return string.Format(" log --reverse {1} --after=\"{0} 00:00:00\" --before=\"{0} 23:59:59\" --format=%B",
+                FormatDateForGit(dtPicker.Value.Date), GetAuthorsString());
+        }
+
+        private string GetAuthorsString() {
+            var authorsAll = txtUsersCsv.Text;
+            var authorsList = authorsAll.Split(new []{","}, StringSplitOptions.RemoveEmptyEntries);
+            var sb = new StringBuilder();
+            foreach (var a in authorsList) {
+                sb.AppendFormat(" --author=\"{0}\" ", a);
+            }
+            return sb.ToString();
         }
 
         private string FormatDateForGit(DateTime dt) {
