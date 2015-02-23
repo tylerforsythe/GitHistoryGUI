@@ -32,6 +32,8 @@
             this.txtResult = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGo = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtWorkingDirectory = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dtPicker
@@ -70,16 +72,16 @@
             // 
             // txtResult
             // 
-            this.txtResult.Location = new System.Drawing.Point(12, 79);
+            this.txtResult.Location = new System.Drawing.Point(12, 92);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(823, 500);
+            this.txtResult.Size = new System.Drawing.Size(823, 487);
             this.txtResult.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 60);
+            this.label3.Location = new System.Drawing.Point(13, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 5;
@@ -95,11 +97,29 @@
             this.btnGo.UseVisualStyleBackColor = true;
             this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Working Directory:";
+            // 
+            // txtWorkingDirectory
+            // 
+            this.txtWorkingDirectory.Location = new System.Drawing.Point(113, 45);
+            this.txtWorkingDirectory.Name = "txtWorkingDirectory";
+            this.txtWorkingDirectory.Size = new System.Drawing.Size(403, 20);
+            this.txtWorkingDirectory.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 591);
+            this.Controls.Add(this.txtWorkingDirectory);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtResult);
@@ -123,6 +143,8 @@
         private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtWorkingDirectory;
     }
 }
 

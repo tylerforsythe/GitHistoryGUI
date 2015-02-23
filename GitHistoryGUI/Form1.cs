@@ -17,6 +17,7 @@ namespace GitHistoryGUI
             InitializeComponent();
 
             txtUsersCsv.Text = "tylerforsythe,Tyler Forsythe";
+            txtWorkingDirectory.Text = @"C:\home\projects\IMPrinting\src-lucy";
         }
 
         private void btnGo_Click(object sender, EventArgs e) {
@@ -24,7 +25,7 @@ namespace GitHistoryGUI
             var args = GetArgumentsString();
 
             var process = new Process();
-            process.StartInfo.WorkingDirectory = @"C:\home\projects\IMPrinting\src-lucy";
+            process.StartInfo.WorkingDirectory = txtWorkingDirectory.Text;
             process.StartInfo.FileName = commandString;
             process.StartInfo.Arguments = args;
             process.StartInfo.UseShellExecute = false;
