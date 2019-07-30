@@ -33,7 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnGo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtWorkingDirectory = new System.Windows.Forms.TextBox();
+            this.comboPaths = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // dtPicker
@@ -106,19 +106,20 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Working Directory:";
             // 
-            // txtWorkingDirectory
+            // comboPaths
             // 
-            this.txtWorkingDirectory.Location = new System.Drawing.Point(113, 45);
-            this.txtWorkingDirectory.Name = "txtWorkingDirectory";
-            this.txtWorkingDirectory.Size = new System.Drawing.Size(403, 20);
-            this.txtWorkingDirectory.TabIndex = 7;
+            this.comboPaths.FormattingEnabled = true;
+            this.comboPaths.Location = new System.Drawing.Point(113, 45);
+            this.comboPaths.Name = "comboPaths";
+            this.comboPaths.Size = new System.Drawing.Size(403, 21);
+            this.comboPaths.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(847, 591);
-            this.Controls.Add(this.txtWorkingDirectory);
+            this.Controls.Add(this.comboPaths);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.label3);
@@ -144,7 +145,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtWorkingDirectory;
+        private System.Windows.Forms.ComboBox comboPaths;
     }
 }
 

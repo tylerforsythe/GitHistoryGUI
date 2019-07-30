@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -16,8 +17,13 @@ namespace GitHistoryGUI
         public Form1() {
             InitializeComponent();
 
-            txtUsersCsv.Text = "tylerforsythe,Tyler Forsythe";
-            txtWorkingDirectory.Text = @"C:\home\projects\IMPrinting\src-lucy";
+            txtUsersCsv.Text = ConfigurationManager.AppSettings["Users"];
+
+            var directoryOptions = ConfigurationManager.AppSettings["DirectoryOptions"].Split(new string[] {";"}, StringSplitOptions.RemoveEmptyEntries);
+            BindingSource bs = new BindingSource();
+            bs.DataSource = directoryOptions.ToList();
+            comboPaths.DataSource = bs;
+            comboPaths.Text = directoryOptions[0];
         }
 
         private void btnGo_Click(object sender, EventArgs e) {
@@ -25,7 +31,7 @@ namespace GitHistoryGUI
             var args = GetArgumentsString();
 
             var process = new Process();
-            process.StartInfo.WorkingDirectory = txtWorkingDirectory.Text;
+            process.StartInfo.WorkingDirectory = comboPaths.Text;
             process.StartInfo.FileName = commandString;
             process.StartInfo.Arguments = args;
             process.StartInfo.UseShellExecute = false;
