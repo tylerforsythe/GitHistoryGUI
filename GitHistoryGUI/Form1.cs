@@ -24,6 +24,10 @@ namespace GitHistoryGUI
             bs.DataSource = directoryOptions.ToList();
             comboPaths.DataSource = bs;
             comboPaths.Text = directoryOptions[0];
+
+
+            listPaths.DataSource = bs;
+            listPaths.SelectedIndex = 0;
         }
 
         private void btnGo_Click(object sender, EventArgs e) {
@@ -31,7 +35,8 @@ namespace GitHistoryGUI
             var args = GetArgumentsString();
 
             var process = new Process();
-            process.StartInfo.WorkingDirectory = comboPaths.Text;
+            //process.StartInfo.WorkingDirectory = comboPaths.Text;
+            process.StartInfo.WorkingDirectory = (string)listPaths.SelectedItem;
             process.StartInfo.FileName = commandString;
             process.StartInfo.Arguments = args;
             process.StartInfo.UseShellExecute = false;
@@ -71,6 +76,21 @@ namespace GitHistoryGUI
 
         private void txtUsersCsv_TextChanged(object sender, EventArgs e) {
 
+        }
+
+        private void btnToday_Click(object sender, EventArgs e) {
+            dtPicker.Value = DateTime.Now.Date;
+        }
+
+        private void listPaths_SelectedIndexChanged(object sender, EventArgs e) {
+            
+        }
+
+        private void btnYesterday_Click(object sender, EventArgs e) {
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+                dtPicker.Value = DateTime.Now.Date.AddDays(-3);
+            else
+                dtPicker.Value = DateTime.Now.Date.AddDays(-1);
         }
     }
 }
