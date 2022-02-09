@@ -75,16 +75,16 @@
             // 
             // txtResult
             // 
-            this.txtResult.Location = new System.Drawing.Point(12, 140);
+            this.txtResult.Location = new System.Drawing.Point(12, 163);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(789, 439);
+            this.txtResult.Size = new System.Drawing.Size(789, 416);
             this.txtResult.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 124);
+            this.label3.Location = new System.Drawing.Point(13, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 5;
@@ -133,7 +133,7 @@
             this.listPaths.FormattingEnabled = true;
             this.listPaths.Location = new System.Drawing.Point(16, 72);
             this.listPaths.Name = "listPaths";
-            this.listPaths.Size = new System.Drawing.Size(556, 43);
+            this.listPaths.Size = new System.Drawing.Size(556, 69);
             this.listPaths.TabIndex = 10;
             this.listPaths.SelectedIndexChanged += new System.EventHandler(this.listPaths_SelectedIndexChanged);
             // 
