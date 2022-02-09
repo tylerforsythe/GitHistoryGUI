@@ -1,0 +1,10 @@
+Found at: https://iconarchive.com/show/papirus-places-icons-by-papirus-team/folder-teal-git-icon.html
+
+Artist: Papirus Development Team
+Iconset: Papirus Places Icons (255 icons)
+License: GNU General Public License v3.0
+Commercial usage: Allowed
+Readme file: readme.txt
+
+What appears to be original github repo:
+https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
